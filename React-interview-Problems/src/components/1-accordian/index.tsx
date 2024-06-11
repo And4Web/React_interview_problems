@@ -1,7 +1,7 @@
 import { useState } from "react";
+import { GoTriangleDown, GoTriangleUp } from "react-icons/go";
 import data from "./data";
 import "./style.css";
-import { BiMinus, BiPlus } from "react-icons/bi";
 
 // this project started at 10:00 and ended at 30:48
 
@@ -11,19 +11,41 @@ function Accordian() {
   const [selected, setSelected] = useState<boolean>(false);
   const [currentId, setCurrentId] = useState<number>(0);
   const [enableMulti, setEnableMulti] = useState<boolean>(false);
+  const [multipleIndeces, setMultipleIndeces] = useState<number[]>([]);
 
   const handleSingleSelection = (id: number) => {
     setSelected(true);
     setCurrentId(currentId !== id ? id : 0);
   };
 
-  const handleMultiSelection = (currentId: number) => {};
+  const setMultipleSelection = () => {
+    setMultipleIndeces([]);
+    setEnableMulti(!enableMulti);
+    setSelected(!selected)
+  }
 
-  console.log(selected, enableMulti, currentId);
+  const handleMultiSelection = (index: number) => {
+    // setSelected(!selected);
+    
+    const tempArr = [...multipleIndeces];
+
+    // console.log(tempArr.indexOf(index));
+
+    if(tempArr.indexOf(index) === -1) {
+      tempArr.push(index)
+    }else {
+      tempArr.splice(tempArr.indexOf(index), 1)
+    }
+
+    setMultipleIndeces(tempArr)
+  };
+
+  // console.log( selected, enableMulti, multipleIndeces);
   return (
     <div className="container">
       <h3>What's your question about T20 World cup?</h3>
-      <button className="acc-btn">Enable Multi Selection</button>
+      <button className="acc-btn" onClick={setMultipleSelection}>{
+        enableMulti? "Disable Multi Selection" : "Enable Multi Selection"}</button>
 
       {!data ? (
         <>No Data found!</>
@@ -36,16 +58,20 @@ function Accordian() {
 
                 <span
                   className="acc-icon"
-                  onClick={() => handleSingleSelection(item.id)}
+                  onClick={() => enableMulti ? handleMultiSelection(item.id) : handleSingleSelection(item.id)}
                 >
-                  {selected && (currentId === item.id) ? (
-                    <BiMinus />
+                  {!enableMulti ? (selected && (currentId === item.id) ? (
+                    <GoTriangleUp />
                   ) : (
-                    <BiPlus />
-                  )}
+                    <GoTriangleDown />
+                  )):(selected && (multipleIndeces.includes(item.id)) ? (
+                    <GoTriangleUp />
+                  ) : (
+                    <GoTriangleDown />
+                  ))}
                 </span>
               </div>
-              {selected && currentId === item.id && (
+              {enableMulti ? (selected && multipleIndeces.includes(item.id) && <div className="acc-answer">{item.answer}</div>) : (selected && currentId === item.id) && (
                 <div className="acc-answer">{item.answer}</div>
               )}
             </div>
