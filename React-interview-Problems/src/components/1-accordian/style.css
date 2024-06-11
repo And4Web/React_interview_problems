@@ -1,0 +1,65 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+  border-radius: 5px;
+  width: 60%;
+  margin: auto;
+  /* padding: 1rem; */
+  box-shadow: 1px 1px 5px gray;
+}
+
+.acc-btn{  
+  outline: none; 
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px gray;
+  background-color: white;
+  color: black;
+}
+.acc-btn:active{
+  box-shadow: inset 1px 1px 2px gray;
+  /* background-color: black;
+  color: white; */
+
+}
+
+.acc-wrapper{
+
+  /* border: 1px solid red; */
+  width: 80%;
+  padding: 1rem;
+  border-radius: 5px;
+  /* box-shadow: 1px 1px 5px gray; */
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.acc-question{
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+}
+
+.acc-icon{
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.acc-answer{
+  color: red;
+  width: 90%;
+  /* box-shadow: 1px 1px 2px gray; */
+  border-bottom: 3px solid black;
+  border-radius: 5px;
+  padding: 1rem 0;
+}
