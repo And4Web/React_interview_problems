@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 function App() {
   return (
     <>
-      <h1>React interview problems</h1>
+      <h1 style={{textAlign: "center"}}>React interview problems</h1>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
       </Routes>

@@ -1,0 +1,37 @@
+.rcg-container{
+  margin: 1rem;
+  padding: 1rem;
+  /* border: 1px solid gray; */
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px gray;
+}
+
+.rcg-btn-group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.rcg-btn{
+  outline:none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px gray;
+  padding: 10px;
+  cursor: pointer;
+}
+.rcg-btn:active{
+  box-shadow: inset 1px 1px 2px gray;
+}
+.rcg-titles{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.rcg-color-type{
+  font-size: 3rem;
+}
+.rcg-color{
+  font-size: 2.5rem;
+}
