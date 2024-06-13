@@ -43,7 +43,7 @@ function RandomColorGenerator() {
     }
   }
 
-  console.log(randomColor)
+  // console.log(randomColor)
 
   return (
     <div className="rcg-container" style={{backgroundColor: randomColor}}>

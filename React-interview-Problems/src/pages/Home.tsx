@@ -2,6 +2,7 @@
 // Components
 import Accordian from "../components/1-accordian"
 import RandomColorGenerator from "../components/2-randomColorGenerator"
+import StarRating from "../components/3-starRating"
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       {/* 2. */}
       <RandomColorGenerator/>
       {/* 3. */}
+      <StarRating numberOfStars={10}/>
       {/* 4. */}
       {/* 5. */}
       {/* 6. */}

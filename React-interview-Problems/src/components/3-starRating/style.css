@@ -1,0 +1,35 @@
+.sr-container{
+  /* border: 1px solid black; */
+  box-shadow: 1px 1px 5px gray;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 1rem;
+}
+.sr-title{
+  text-align: center;
+}
+
+.sr-stars{
+  margin: 1rem;
+  padding: 1rem;
+  box-shadow: 1px 1px 5px gray;
+  border-radius: 10px;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.sr-star{
+  font-size: 1.8rem;
+  border: none;
+  filter: drop-shadow(1px 1px 2px gray);
+  margin-right: 3px;
+  
+}
+.sr-star:hover{
+  cursor: pointer;
+}
+.sr-star:active{
+  transform: scale(0.9);
+}
