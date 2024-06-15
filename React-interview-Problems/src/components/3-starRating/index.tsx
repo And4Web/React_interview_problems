@@ -15,7 +15,7 @@ function StarRating({numberOfStars = 5}:Props) {
   
 
   const handleOnClick = (index: number):undefined => {
-    setSelectedIndex(index);
+    // setSelectedIndex(index);
     setRating(index);
     // console.log("click: ", index);
   }
@@ -28,11 +28,11 @@ function StarRating({numberOfStars = 5}:Props) {
 
   const handleMouseOut = ():undefined => {
     // console.log('mouseOut: ');
-    // setSelectedIndex(0);
-    setRating(rating);
+    setSelectedIndex(rating);
+    // setRating(0);
   }
 
-  // console.log(rating, selectedIndex);
+  console.log(rating, selectedIndex);
 
   return (
     <div className='sr-container'>
@@ -44,7 +44,7 @@ function StarRating({numberOfStars = 5}:Props) {
             index += 1;
             return (
               <div className="sr-star" key={index}>
-                <FaStar onClick={()=>handleOnClick(index)} onMouseMove={()=>handleMouseMove(index)} onMouseOut={handleMouseOut} color={ index <= rating ? 'gold': ""}/>
+                <FaStar onClick={()=>handleOnClick(index)} onMouseMove={()=>handleMouseMove(index)} onMouseOut={handleMouseOut} color={ index <= rating || index <= selectedIndex ? 'gold': ""}/>
               </div>
             )
           })
