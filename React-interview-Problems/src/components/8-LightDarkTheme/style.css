@@ -1,0 +1,57 @@
+:root{
+  --background: white;
+  --text-primary: black;
+  --btn-bg: whitesmoke;
+  --btn-text: black;
+  --shadow: gray;
+}
+
+[data-theme="dark"]{
+  --background: black;
+  --text-primary: white;
+  --btn-bg: rgb(158, 155, 155);
+  --btn-text: rgb(214, 212, 212);
+  --shadow: rgb(84, 83, 83);
+}
+
+.ldm-container{
+  /* border: 1px solid black; */
+  border-radius: 5px;
+  margin: 1rem;
+  height: 100vh;
+  width: auto;
+  box-shadow: 2px 2px 5px gray;
+  padding: 1rem;
+  background-color: var(--background);
+}
+.ldm-title{
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.ldm-light-dark{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+.ldm-text{
+  font-size: 1.5rem;
+  color: var(--text-primary)
+}
+.ldm-btn{
+  border: none;
+  outline: none;
+  padding: .8rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px var(--shadow);
+  cursor: pointer;
+  font-size: 1.1rem;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+}
+.ldm-btn:active{
+  box-shadow: inset 1px 1px 2px var(--shadow);
+  transform: translateY(1px);
+}

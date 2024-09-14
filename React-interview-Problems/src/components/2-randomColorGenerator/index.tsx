@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './style.css';
 
 function RandomColorGenerator() {
-  // project started at 30:00 and finished at 44:45
+  // from 30:00 to 44:45
 
   const [colorType, setColorType] = useState<string>("hex");
   const [randomColor, setRandomColor] = useState<string>("#63639c")

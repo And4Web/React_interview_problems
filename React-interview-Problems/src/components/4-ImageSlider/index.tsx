@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import './style.css'
-import { BsArrowBarLeft, BsArrowBarRight, BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+import './style.css';
 
 // from 56:51 to 1:20:35
 
@@ -40,7 +40,7 @@ function ImageSlider({url, limit=5, page=1}: Props) {
     setIndicator(index);
   }
 
-  console.log(currentSlide, indicator)
+  // console.log(currentSlide, indicator)
   const fetchImages = async (getUrl: string) => {
     try {
       setLoading(true);

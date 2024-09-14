@@ -33,3 +33,9 @@
 .sr-star:active{
   transform: scale(0.9);
 }
+.sr-star .active{
+  color: gold;
+}
+.sr-star .inactive{
+  color: black;
+}

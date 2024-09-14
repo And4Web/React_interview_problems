@@ -10,6 +10,7 @@ import "./style.css";
 function Accordian() {
   const [selected, setSelected] = useState<boolean>(false);
   const [currentId, setCurrentId] = useState<number>(0);
+
   const [enableMulti, setEnableMulti] = useState<boolean>(false);
   const [multipleIndeces, setMultipleIndeces] = useState<number[]>([]);
 
@@ -21,7 +22,7 @@ function Accordian() {
   const setMultipleSelection = () => {
     setMultipleIndeces([]);
     setEnableMulti(!enableMulti);
-    setSelected(!selected)
+    // setSelected(!selected)
   }
 
   const handleMultiSelection = (index: number) => {
@@ -48,7 +49,7 @@ function Accordian() {
         enableMulti? "Disable Multi Selection" : "Enable Multi Selection"}</button>
 
       {!data ? (
-        <>No Data found!</>
+        <h1>No Data found!</h1>
       ) : (
         data.map((item, index) => {
           return (
