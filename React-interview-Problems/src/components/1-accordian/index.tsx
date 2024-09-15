@@ -44,6 +44,7 @@ function Accordian() {
   // console.log( selected, enableMulti, multipleIndeces);
   return (
     <div className="container">
+      <h3 className="acc-title">Project 1. Accordian</h3>
       <h3>What's your question about T20 World cup?</h3>
       <button className="acc-btn" onClick={setMultipleSelection}>{
         enableMulti? "Disable Multi Selection" : "Enable Multi Selection"}</button>

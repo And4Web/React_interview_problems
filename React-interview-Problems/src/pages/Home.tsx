@@ -9,6 +9,7 @@ import TreeViewSideMenus from "../components/6-nestedSidebarMenu";
 import menus from '../components/6-nestedSidebarMenu/data';
 import QrCodeGenerator from "../components/7-qrCodeGenerator";
 import LightDarkMode from "../components/8-LightDarkTheme";
+import CustomScroll from "../components/9-customScrollIndicator";
 
 function Home() {
   return (
@@ -20,7 +21,7 @@ function Home() {
       {/* 3. */}
       <StarRating numberOfStars={10}/>
       {/* 4. Image Slider*/}
-      <ImageSlider url="https://picsum.photos/v2/list" limit={10} page={5}/>
+      {/* <ImageSlider url="https://picsum.photos/v2/list" limit={10} page={5}/> */}
       {/* 5. Load more data*/}
       <LoadMoreData/>
       {/* 6. Nested Menu bar or Dynamic Tree view*/}
@@ -29,7 +30,8 @@ function Home() {
       <QrCodeGenerator/>
       {/* 8. Light dark mode*/}
       <LightDarkMode/>
-      {/* 9. */}
+      {/* 9. Custom scroll indicator*/}
+      <CustomScroll url={'https://dummyjson.com/products?limit=100'}/>
       {/* 10. */}
       {/* 11. */}
       {/* 12. */}
