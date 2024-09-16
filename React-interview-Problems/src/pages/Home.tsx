@@ -2,6 +2,7 @@
 // Components
 import Accordian from "../components/1-accordian";
 import CustomTabs from "../components/10-customTabs";
+import CustomModal from "../components/11- customModal";
 import RandomColorGenerator from "../components/2-randomColorGenerator";
 import StarRating from "../components/3-starRating";
 import ImageSlider from "../components/4-imageSlider";
@@ -35,7 +36,8 @@ function Home() {
       {/* <CustomScroll url={'https://dummyjson.com/products?limit=100'}/> */}
       {/* 10. Custom Tabs with dynamic content*/}
       <CustomTabs/>
-      {/* 11. */}
+      {/* 11. Custom Modal Popup*/}
+      <CustomModal/>
       {/* 12. */}
       {/* 13. */}
       {/* 14. */}

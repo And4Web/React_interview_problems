@@ -9,19 +9,13 @@ type Props = {
   onChange?: ()=>undefined
 }
 
-function RandomComponent({content}){
-  return (
-    <div className="ct-random-component">
-      {content}
-    </div>
-  )
-}
 
-function Tabs({tabContent}:Props) {
+function Tabs({tabContent, onChange}:Props) {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const handleClick = (id:number) => {
     setCurrentIndex(id);
+    onChange(id)
   }
 // console.log(currentIndex)
   return (
@@ -33,12 +27,15 @@ function Tabs({tabContent}:Props) {
           ))
         }
       </div>
-      {
+      {/* {
         tabContent && tabContent.length > 0 && tabContent.map((tab, index)=>{
           return (
             currentIndex === index && <RandomComponent key={`${index}-${tab.label}`} content={tab.content}/>
           )
         })
+      } */}
+      {
+        tabContent[currentIndex] && tabContent[currentIndex].content
       }
     </div>
   )

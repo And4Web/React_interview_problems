@@ -4,6 +4,14 @@ import Tabs from "./Tabs"
 
 // from 2:43:16 to 2:56:52
 
+function RandomComponent({content}:{content: string}){
+  return (
+    <div className="ct-random-component">
+      <div className="ct-tab-content">{content}</div>      
+    </div>
+  )
+}
+
 function CustomTabs() {
   const tabContent:{id: number, label: string, content: string | HTMLDivElement}[] = [
     {
@@ -19,14 +27,17 @@ function CustomTabs() {
     {
       id: 13,
       label: "Tab 3",
-      content: <div className="ct-tab-content">This is tab 3 Component</div>
+      content: <RandomComponent content="This is tab 3 Component"/>
     },
   ]
+  const handleOnChange = (index) => {
+    console.log("Parent : ", index);
+  }
   return (
     <div className="ct-container">
       <h3 className="ct-title">Project 10. Custom Tabs</h3>    
       
-      <Tabs tabContent={tabContent}/>
+      <Tabs tabContent={tabContent} onChange={handleOnChange}/>
           
     </div>
   )
