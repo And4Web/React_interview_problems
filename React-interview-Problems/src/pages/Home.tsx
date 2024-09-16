@@ -1,6 +1,7 @@
 
 // Components
 import Accordian from "../components/1-accordian";
+import CustomTabs from "../components/10-customTabs";
 import RandomColorGenerator from "../components/2-randomColorGenerator";
 import StarRating from "../components/3-starRating";
 import ImageSlider from "../components/4-imageSlider";
@@ -31,8 +32,9 @@ function Home() {
       {/* 8. Light dark mode*/}
       <LightDarkMode/>
       {/* 9. Custom scroll indicator*/}
-      <CustomScroll url={'https://dummyjson.com/products?limit=100'}/>
-      {/* 10. */}
+      {/* <CustomScroll url={'https://dummyjson.com/products?limit=100'}/> */}
+      {/* 10. Custom Tabs with dynamic content*/}
+      <CustomTabs/>
       {/* 11. */}
       {/* 12. */}
       {/* 13. */}

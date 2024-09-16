@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './style.css';
 
-// from 2:25:45 to 
+// from 2:25:45 to 2:43:15
 // dummyjson.com/docs/products
 
 type DataType = {
@@ -49,7 +49,7 @@ function CustomScroll({url}:Props) {
       }      
       
     } catch (error) {
-      console.log(error?.message);
+      // console.log(error?.message);
       setErrorMsg(error?.message);
       setLoading(false);
     }
@@ -69,14 +69,19 @@ function CustomScroll({url}:Props) {
     // console.log("documentElement scrollHeight >>> ", document.documentElement.scrollHeight)
     // console.log("documentElement clientHeight >>> ", document.documentElement.clientHeight)
 
+    // console.log("documentElement scrollTop >>> ", document.documentElement.querySelector(".csi-container")?.scrollTop)
+    // console.log("document element >>> ", document.documentElement.querySelector(".csi-container")?.scrollTop);
+
+
     const howMuchScrolled = document.body.scrollTop || document.documentElement.scrollTop;
 
+    // const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     
     const percentageScrolled = (howMuchScrolled/height)*100;
 
     setScrollPercentage(percentageScrolled);
-    console.log("how Much scrolled >> ", Math.ceil(percentageScrolled), "%")
+    // console.log("how Much scrolled >> ", Math.ceil(percentageScrolled), "%")
   }
 
   useEffect(()=>{
@@ -88,11 +93,15 @@ function CustomScroll({url}:Props) {
       
   }, [])
 
+
   return (
     <div className="csi-container">
-      <h3 className="csi-title">Project 9. Custom Scroll Indicator</h3>
-      <div className="csi-progress-bar-container">
-        <div className="csi-progress-bar" style={{width: `${scrollPercentage}%`, height: "6px", backgroundColor: "gold", boxShadow: "1px 1px 2px green", borderRadius: "0 5px 5px 0"}}></div>
+      <div className="csi-header">
+        <h3 className="csi-title">Project 9. Custom Scroll Indicator</h3>
+
+        <div className="csi-progress-bar-container">
+          <div className="csi-progress-bar" style={{width: `${scrollPercentage}%`, height: "6px", background: "linear-gradient(to right, orange, gold, yellow, #f5f77d)", boxShadow: "1px 1px 2px green", borderRadius: "0 5px 5px 0"}}></div>
+        </div>
       </div>
 
       { 

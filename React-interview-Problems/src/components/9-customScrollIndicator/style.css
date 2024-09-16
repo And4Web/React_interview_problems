@@ -1,8 +1,9 @@
+
 .csi-container{
   margin: 1rem;
   box-shadow: 2px 2px 5px gray;
   border-radius: 5px;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
   height: auto;
   width: auto;
   background-color: rgb(218, 234, 248);
@@ -11,16 +12,35 @@
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
+  /* position: relative; */
+}
+.csi-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 97.5%;
+  margin: auto;
+  padding: 0;
   position: relative;
+  position: sticky;
+  top: 0;
+  /* border: 1px solid black; */
 }
 .csi-title{
   text-align: center;
   color: rgb(14, 107, 107);
-  position: sticky;
-  top: 0;
   background-color: rgb(174, 198, 174);
   width: 100%;
   padding: 1rem;
+}
+.csi-progress-bar-container{
+  width: 100%;
+  height: 6px;
+  /* border: 1px solid black; */
+  /* position: fixed; */
+  /* top: 3rem; */
+  
 }
 .csi-card{
   height: auto;
@@ -42,12 +62,4 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-}
-.csi-progress-bar-container{
-  width: 92.4%;
-  height: 6px;
-  /* border: 1px solid black; */
-  position: fixed;
-  top: 3.33rem;
-  
 }
