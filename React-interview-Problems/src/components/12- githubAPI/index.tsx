@@ -75,7 +75,7 @@ function GithubProfiles() {
 
       <input type="text" placeholder="Enter Username" className="ghp-search" value={username} onChange={(e)=>setUsername(e.target.value)}/>
 
-      <button className="ghp-btn" onClick={handleSubmit}>Search Github</button>
+      <button className="ghp-submit-btn" onClick={handleSubmit}>Search Github</button>
 
       <div className="ghp-profile-container">       
         {

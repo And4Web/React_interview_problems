@@ -7,12 +7,36 @@
   box-shadow: 2px 2px 5px gray;
   border-radius: 5px;
   background: linear-gradient(to bottom, violet, indigo, blue, green, yellow, orange, red);
- 
+  display: flex;
+  flex-direction: column;
 }
 
 .ghp-title{
   text-align: center;
   color: whitesmoke;
+}
+.ghp-search{
+  padding: .4rem 1rem;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 18rem;
+  margin: .5rem auto;
+  box-shadow: 2px 2px 2px gray;
+  
+}
+.ghp-submit-btn{
+  background-color: whitesmoke;
+  color: black;
+  padding: .5rem;
+  width: auto;
+  margin: auto;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
 }
 
 .ghp-user-card{
@@ -153,7 +177,8 @@
 }
 @media screen and (max-width: 620px) {
   .ghp-name{    
-    font-size: 1.4rem;   
+    font-size: 1.4rem; 
+    line-height: 1.5rem;  
   }
   .ghp-user-name{    
     font-size: 1rem;    

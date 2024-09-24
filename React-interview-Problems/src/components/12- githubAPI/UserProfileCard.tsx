@@ -25,14 +25,14 @@ function UserProfileCard({userData}:UserProps) {
       <div className="ghp-intro-container">
         <img src={avatar_url} alt={name} />
         <div className="ghp-name-container">
-          <h2 className="ghp-name">{name}</h2>
+          <h2 className="ghp-name">{name?`${name}`:"Unknown"}</h2>
           <a href={html_url} className="ghp-user-name" target="_blank">(@{login})</a>
         </div>
       </div>
 
       <div className="ghp-company">
         <FaBuildingUser className="ghp-icon"/>
-        <h4>{company} Pvt. Ltd.</h4>
+        <h4>{company?`${company}`: `No Company Found`}</h4>
       </div>
 
       <div className="ghp-numbers">

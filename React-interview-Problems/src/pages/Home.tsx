@@ -4,6 +4,7 @@ import Accordian from "../components/1-accordian";
 import CustomTabs from "../components/10-customTabs";
 import CustomModal from "../components/11- customModal";
 import GithubProfiles from "../components/12- githubAPI";
+import SearchAutoComplete from "../components/13- searchAutocomplete";
 import RandomColorGenerator from "../components/2-randomColorGenerator";
 import StarRating from "../components/3-starRating";
 import ImageSlider from "../components/4-imageSlider";
@@ -41,7 +42,8 @@ function Home() {
       <CustomModal/>
       {/* 12. Github API Profiles fetch*/}
       <GithubProfiles/>
-      {/* 13. */}
+      {/* 13. Search Auto Complete*/}
+      <SearchAutoComplete/>
       {/* 14. */}
       {/* 15. */}
       {/* 16. */}
