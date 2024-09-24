@@ -9,8 +9,8 @@ function LightDarkMode() {
   const handleToggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : "light");
   };
-  console.log(theme)
-  // 
+  // console.log(theme)
+  
   return (
     <div className="ldm-container" data-theme={theme}>
       <h3 className="ldm-title">Project 8. Light & Dark mode</h3>

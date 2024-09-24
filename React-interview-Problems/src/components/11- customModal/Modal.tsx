@@ -9,7 +9,7 @@ type Props = {
 function Modal({header, content, footer, onClose}:Props) {
   return (
     <>
-    <div className="cm-modal"></div>
+      <div className="cm-modal"></div>
       
       <div className="cm-modal-box">
         <div className="cm-modal-header">

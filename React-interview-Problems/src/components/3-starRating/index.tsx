@@ -38,7 +38,7 @@ function StarRating({numberOfStars = 5}:Props) {
   const handleMouseLeave = () => {
     setSelectedIndex(rating)
   }
-  console.log(rating, selectedIndex);
+  // console.log(rating, selectedIndex);
 
   return (
     <div className='sr-container'>
