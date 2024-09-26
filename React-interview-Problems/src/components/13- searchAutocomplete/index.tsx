@@ -2,7 +2,7 @@ import { ChangeEvent, useEffect, useState } from 'react';
 import './style.css';
 import DropdownBox from './DropdownBox';
 
-// from 3:36:12 to 
+// from 3:36:12 to 3:53:40
 function SearchAutoComplete() {
 
   const [loading, setLoading] = useState<boolean>(false);

@@ -1,0 +1,61 @@
+.ttt-container{
+  margin: 1rem auto;
+  padding: 1rem;
+  box-shadow: 2px 2px 5px gray;
+  border-radius: 5px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ttt-title{
+  text-align: center;
+}
+.ttt-row{
+  /* border: 1px solid red; */
+  height: auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ttt-square{
+  border: 1px solid green;
+  height: 5rem;
+  width: 5rem;
+  float: left;
+  cursor: pointer;
+}
+.ttt-players{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 1rem;
+  /* border: 1px solid black; */
+  width: 100%;
+  margin: 1rem 0;
+}
+.ttt-px{
+  color: blue;
+}
+.ttt-po{
+  color: red;
+}
+.ttt-draw{
+  color: green;
+}
+.ttt-result{
+  text-align: center;
+  /* border: 1px solid black; */
+  margin-bottom: -1rem;
+}
+.ttt-res-btn{
+  padding: .5rem;
+  border: none;
+  outline: none;
+  box-shadow: 2px 2px 5px gray;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
